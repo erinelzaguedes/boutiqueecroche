@@ -655,7 +655,7 @@ function applyLogo(){
   if(storeConfig.logo){
     wrap.innerHTML=`<img src="${storeConfig.logo}" class="header-logo-img" onclick="goHome()" alt="logo">`;
   } else {
-    const name=storeConfig.name||'M&H Closet';
+    const name=storeConfig.name||'꧁Boutique&Crochê꧂';
     const p=name.split('&');
     wrap.innerHTML=`<div class="logo" id="logoText" onclick="goHome()">${p.length>1?p[0]+'<span>&</span>'+p.slice(1).join('&'):name}</div>`;
   }
@@ -680,7 +680,7 @@ async function load(){
 
 // ── CONFIG ──
 function applyConfig(){
-  const name=storeConfig.name||'M&H Closet';
+  const name=storeConfig.name||'꧁Boutique&Crochê꧂';
   const address=storeConfig.address||'Rua Raimundo Lima, 398 — Jerusalém, Tefé/AM';
   const slogan=storeConfig.slogan||'Moda feminina e masculina com estilo';
   const deco=storeConfig.deco||'🌸 🌸';
@@ -695,7 +695,7 @@ function applyConfig(){
 window.saveConfig=async function(){
   const newPass=$('cfgPass').value.trim();
   const data={
-    name:$('cfgName').value.trim()||'M&H Closet',
+    name:$('cfgName').value.trim()||'꧁Boutique&Crochê꧂',
     deco:$('cfgDeco').value.trim()||'🌸 🌸',
     slogan:$('cfgSlogan').value.trim()||'Moda feminina e masculina com estilo',
     address:$('cfgAddress').value.trim()||'Rua Raimundo Lima, 398 — Jerusalém, Tefé/AM',
@@ -719,7 +719,7 @@ window.saveConfig=async function(){
   loading(false);
 };
 function loadConfigForm(){
-  $('cfgName').value=storeConfig.name||'M&H Closet';
+  $('cfgName').value=storeConfig.name||'꧁Boutique&Crochê꧂';
   $('cfgDeco').value=storeConfig.deco||'🌸 🌸';
   $('cfgSlogan').value=storeConfig.slogan||'Moda feminina e masculina com estilo';
   $('cfgAddress').value=storeConfig.address||'Rua Raimundo Lima, 398 — Jerusalém, Tefé/AM';
@@ -810,7 +810,7 @@ window.openSobre=function(){
   document.querySelectorAll('.nav-cat').forEach(b=>b.classList.remove('active'));
   const s=storeConfig;
   const set=(id,val)=>{const el=$(id);if(el)el.textContent=val||'';};
-  set('sobreNome',s.name||'M&H Closet');set('sobreEndereco',s.address||'');
+  set('sobreNome',s.name||'꧁Boutique&Crochê꧂t');set('sobreEndereco',s.address||'');
   set('sobreWpp',s.wppDisplay||'');set('sobreCity',s.city||'');
   set('sobreHorasSemana',s.horasSemana||'08h às 18h');set('sobreHorasSab',s.horasSab||'08h às 14h');set('sobreHorasDom',s.horasDom||'Fechado');
   const dr=$('sobreDescRow');if(dr){dr.style.display=s.desc?'flex':'none';set('sobreDesc',s.desc||'');}
@@ -892,7 +892,7 @@ window.shareProduct=function(id){
 };
 window.openWppFloat=function(){
   const wpp=storeConfig.wpp||'5597984455844';
-  const name=storeConfig.name||'M&H Closet';
+  const name=storeConfig.name||'꧁Boutique&Crochê꧂';
   window.open('https://wa.me/'+wpp+'?text='+encodeURIComponent(`Olá, ${name}! 👋 Gostaria de mais informações.`),'_blank');
 };
 
